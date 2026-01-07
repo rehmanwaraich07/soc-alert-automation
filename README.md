@@ -312,11 +312,9 @@ The core **automation design and SOC workflow** in this project are what I want 
 
 This repo is meant to include:
 
-- `n8n/` — exported n8n workflow JSON for the SOC alert automation  
-- `splunk/` — example correlation searches and saved searches  
-- `docker/` — `docker-compose.yml` and example `.env` template  
-- `docs/` — additional screenshots and setup notes (optional)  
-- `soc-automation.md` — this detailed project walkthrough for portfolio / hiring managers
+- `splunk/` — `inputs.conf` file for splunk forwarder.
+- `n8n` — `docker-compose.yml` for n8n installation.
+- `soc-automation-project-details.md` — this file contains project detailed descritpion same as here.
 
 ---
 
