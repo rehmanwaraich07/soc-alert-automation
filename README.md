@@ -1,5 +1,7 @@
 # SOC Alert Automation with Splunk, n8n & Slack
 
+**Real-Time Security Alert Enrichment System** — by Misbah Ur Rehman, SOC Analyst
+
 ## Overview
 
 I built an end-to-end SOC alert automation pipeline that takes raw Splunk alerts and turns them into fully enriched, ready‑to‑act notifications in Slack. The workflow automatically maps activity to MITRE ATT&CK, enriches IOCs, and gives the SOC team clear, step‑by‑step response actions — all in under 10 seconds from detection to Slack.
@@ -115,6 +117,7 @@ End result: **~10 seconds** from detection in Splunk to a fully enriched alert i
 
 This turns a raw event into something **directly actionable**.
 
+![OpenAI Integration](./public/soc-automation/openai-intergrations.png)
 ![AI Enrichment / Automation Success](./public/soc-automation/automation-success.png)
 
 ### 3. Slack Node
@@ -308,13 +311,23 @@ The core **automation design and SOC workflow** in this project are what I want 
 
 ---
 
-## Repository Contents (Planned)
+## Future Enhancements
 
-This repo is meant to include:
+Ideas I'd like to build on top of this pipeline:
 
-- `splunk/` — `inputs.conf` file for splunk forwarder.
-- `n8n` — `docker-compose.yml` for n8n installation.
-- `soc-automation-project-details.md` — this file contains project detailed descritpion same as here.
+- **Automated ITSM ticket creation** directly from Slack actions
+- **EDR integration** for one-click host isolation on critical alerts
+- **Alert correlation** to detect multi-stage attack campaigns
+- **Detection-family-specific playbooks** (phishing, malware, lateral movement)
+
+---
+
+## Repository Contents
+
+- `resources/inputs.conf` — Splunk Universal Forwarder input configuration for Windows endpoints.
+- `resources/docker-compose.yaml` — Docker Compose file used to run n8n.
+- `public/soc-automation/` — screenshots of the Splunk detections, n8n workflow, and Slack alert output referenced throughout this doc.
+- `soc-automation-project-details.md` — this file, containing the full project write-up.
 
 ---
 
